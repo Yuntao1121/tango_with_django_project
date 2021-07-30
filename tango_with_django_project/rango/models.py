@@ -26,6 +26,7 @@ class Page(models.Model):
     views = models.IntegerField(default=0)
     def __str__(self):
         return self.title
+        
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     website = models.URLField(blank=True)
